@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C0DD3C5208106F800160858 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0DD3C4208106F800160858 /* main.cpp */; };
+		0CFCEDCC20810BD800BB364D /* p_1001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCEDCA20810BD800BB364D /* p_1001.cpp */; };
+		0CFCEDD020810DC900BB364D /* p_1002.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCEDCE20810DC900BB364D /* p_1002.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		0C0DD3C1208106F800160858 /* PAT_basic_level */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PAT_basic_level; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C0DD3C4208106F800160858 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0CFCEDCA20810BD800BB364D /* p_1001.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = p_1001.cpp; sourceTree = "<group>"; };
+		0CFCEDCD20810C2E00BB364D /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		0CFCEDCE20810DC900BB364D /* p_1002.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = p_1002.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +62,10 @@
 		0C0DD3C3208106F800160858 /* PAT_basic_level */ = {
 			isa = PBXGroup;
 			children = (
+				0CFCEDCD20810C2E00BB364D /* Header.h */,
 				0C0DD3C4208106F800160858 /* main.cpp */,
+				0CFCEDCA20810BD800BB364D /* p_1001.cpp */,
+				0CFCEDCE20810DC900BB364D /* p_1002.cpp */,
 			);
 			path = PAT_basic_level;
 			sourceTree = "<group>";
@@ -119,6 +127,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CFCEDCC20810BD800BB364D /* p_1001.cpp in Sources */,
+				0CFCEDD020810DC900BB364D /* p_1002.cpp in Sources */,
 				0C0DD3C5208106F800160858 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
