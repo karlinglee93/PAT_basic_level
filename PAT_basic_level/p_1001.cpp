@@ -18,7 +18,8 @@ void p_1001()
     while(cin >> T && T > 10)
         cout << "unsigned T <= 10, please enter T again: ";
     
-    long * A = new long [10];       // 原表达式VS2017 报错，原因是T 为变量
+    // 原表达式VS2017 报错，原因是T 为变量
+    long * A = new long [10];
     long * B = new long [10];
     long * C = new long [10];
     

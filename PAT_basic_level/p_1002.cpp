@@ -17,7 +17,10 @@ void p_1002()
     unsigned N;
     while(cin >> N && N > 1000)
         cout << "cin again " << endl;
-    unsigned * arr = new unsigned [1000];       // 原表达式VS2017 报错，原因是T 为变量
+    
+    // 原表达式VS2017 报错，原因是T 为变量
+    unsigned * arr = new unsigned [1000];
+    
     unsigned temp;
     for(int i = 0; i < N; i++)
     {
@@ -52,13 +55,19 @@ void p_1002()
         }
     }
     A3 = n;
-    if(n1 != 0)     // 注意n1 可能为0 的情况
+    
+    // 注意n1 可能为0 的情况
+    if(n1 != 0)
         A4 /= n1;
     
-    A1 != 0 ? (cout << A1 << ' ') : (cout << "N ");     // 巧妙的将int ‘转换为’ char
+    // 巧妙的将int ‘转换为’ char
+    A1 != 0 ? (cout << A1 << ' ') : (cout << "N ");
     A2 != 0 ? (cout << A2 << ' ') : (cout << "N ");
     A3 != 0 ? (cout << A3 << ' ') : (cout << "N ");
-    A4 != 0 ? (cout << fixed << setprecision(1) << A4 << ' ') : (cout << "N ");     // iomanip 中fixed 与 setprecision() 结合的用法
+    
+    // iomanip 中fixed 与 setprecision() 结合的用法
+    A4 != 0 ? (cout << fixed << setprecision(1) << A4 << ' ') : (cout << "N ");
+    
     A5 != 0 ? (cout << A5) : (cout << "N");
     
     delete [] arr;
