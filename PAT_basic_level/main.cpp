@@ -21,9 +21,9 @@ void p_1001()
     while(cin >> T && T > 10)
         cout << "unsigned T <= 10, please enter T again: ";
     
-    long A[T];
-    long B[T];
-    long C[T];
+    long * A = new long [10];       // 原表达式VS2017 报错，原因是T 为变量
+    long * B = new long [10];
+    long * C = new long [10];
     
     for(int i = 0; i < T; i++)
     {
@@ -38,6 +38,10 @@ void p_1001()
         else
             cout << "Case #" << i+1 << ": " << "false" << endl;
     }
+    
+    delete [] A;
+    delete [] B;
+    delete [] C;
 }
 
 // practice 1002
@@ -48,7 +52,7 @@ void p_1002()
     unsigned N;
     while(cin >> N && N > 1000)
         cout << "cin again " << endl;
-    unsigned arr[N];
+    unsigned * arr = new unsigned [1000];       // 原表达式VS2017 报错，原因是T 为变量
     unsigned temp;
     for(int i = 0; i < N; i++)
     {
@@ -91,11 +95,13 @@ void p_1002()
     A3 != 0 ? (cout << A3 << ' ') : (cout << "N ");
     A4 != 0 ? (cout << fixed << setprecision(1) << A4 << ' ') : (cout << "N ");     // iomanip 中fixed 与 setprecision() 结合的用法
     A5 != 0 ? (cout << A5) : (cout << "N");
+    
+    delete [] arr;
 }
 
 int main(int argc, const char * argv[])
 {
-    p_1002();
+    p_1001();
     
     return 0;
 }
