@@ -8,46 +8,48 @@
 
 #include "Header.h"
 
-void p_weeks(char ch)
-{
-    
-}
-
-void p_hours(char ch)
-{
-    
-}
-
 void p_1004()
 {
     using namespace std;
     
-    char ch[4][60];
-    int count = 0;
+    char ch[4][61];
+    string day[] = {"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"};
+    // ! 找到第一个相同的大写字符后怎么接着找第二个字符而不是从新开始找
+    bool first = true;
 
     for(int i = 0; i < 4; i++)
     {
-        cin.getline(ch[i], 60);
+        cin >> ch[i];
     }
-    for(int j = 0; ch[0][j] != '\0' && ch[1][j] != '\0'; j++)
+ 
+    // ! 判断两个是否有一个为空
+    for(int i = 0; ch[0][i] && ch[1][i]; i++)
     {
-        if(isupper(ch[0][j]) && ch[0][j] == ch[1][j])
+        if(first && ch[0][i] >= 'A' && ch[0][i] <= 'G' && ch[0][i] == ch[1][i])     // 这里不要用isupper()
         {
-            char temp = ch[0][j];
-            p_weeks(temp);
-            
-            for(int k = ++j; ch[0][j] != '\0' && ch[1][j] != '\0'; k++)
-            {
-                if((isdigit(ch[0][j]) || isupper(ch[0][j])) && ch[0][j] == ch[1][j])
-                {
-                    temp = ch[0][j];
-                    p_hours(temp);
-                    count++;
-                    break;
-                }
-            }
+            // ! 将char 转为int
+            cout << day[ch[0][i] - 'A'] << ' ';
+            first = false;
+            // ! 找到第一个相同的大写字符后怎么接着找第二个字符而不是从新开始找
+            continue;
         }
-        if(count != 0)
+        
+        if(!first && ((ch[0][i] >= 'A' && ch[0][i] <= 'N') || isdigit(ch[0][i])) && ch[0][i] == ch[1][i])
+        {
+            if(isdigit(ch[0][i]))
+                cout << 0 << ch[0][i] - '0'<< ':';
+            else if(isupper(ch[0][i]))
+                cout << 1 << ch[0][i] - 'A' << ':';
             break;
+        }
+    }
+
+    for(int i = 0; ch[2][i] && ch[3][i]; i++)
+    {
+        if(isalpha(ch[2][i]) && (ch[2][i] == ch[3][i]))
+        {
+            cout << i / 10 << i % 10;
+            break;
+        }
     }
 }
