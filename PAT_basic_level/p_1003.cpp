@@ -12,39 +12,32 @@ using namespace std;
 
 void p_1003()
 {
-    int M = 0, N = 0;
-    int * arr = new int [10000];
-    int len = 0;
-    int i = 0, j = 0;
+    int M, N, count = 0;
     cin >> M >> N;
     
     // 质数从2开始
-    for(i = 2; len < N; i++)
+    for(int i = 2; count <= N; i++)
     {
-        for(j = 2; j < i; j++)
-        {
+        int temp = 0;
+        // 判断素数的方法
+        /*不用埃拉托斯特尼筛法：
+         根据素数的定义，判断数n是不是素数，我们只需要从i=2开始，
+         判断n能不能被n整除，一直到n-1，如果可以则说明不是素数。
+         另一方面，一个数若是合数，则一定能写成两个因数相乘的形式，并且两个因数中较小的那个一定小于
+         等于sqrt(n)，否则两个因数的乘积大于n，因为i的终止条件可以设为sqrt(n)，这种方法的时间复杂度
+         为O（n的1.5次方）。空间复杂度为O(1)。*/
+        for(int j = 2; j <= sqrt(i); j++)
             if(i % j == 0)
-                break;
+                temp++;
+        if(temp == 0)
+            count++;
+        if(count >= M && count <= N && temp == 0)
+        {
+            cout << i;
+            if((count - M) % 10 == 9)
+                cout << endl;
+            else if(count != N)
+                cout << ' ';
         }
-        
-        // 判定是否为质数的关键条件
-        if(i <= j)
-            arr[len++] = i;
     }
-
-    // ？？？输出从PM到PN的所有素数，每10个数字占1行，其间以空格分隔，但行末不得有多余空格。
-    int num = 1;
-
-    for(i = M - 1; i < N; i++)
-    {
-        // 输出格式错误。。。坑的一匹。。。
-        cout << arr[i];
-        if(num % 10 != 0 && i != N - 1)
-            cout << ' ';
-        else if(num % 10 == 0)
-            cout << endl;
-        num++;
-    }
-    
-    delete [] arr;
 }
