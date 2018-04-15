@@ -11,11 +11,13 @@
 
 #include <iostream>
 #include <cmath>
+
 // iomanip 中 fixed & setprecision(1) 结合的用法，将保留一位小数（注意题目中 输出例子 的小数位数!) p_1002
 #include <iomanip>
-//#include <string>
+
 #include <cctype>
-// <algorithm> 中的sort()
+
+// <algorithm> 中的sort() p_1005
 #include <algorithm>
 
 #endif /* Header_h */
