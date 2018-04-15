@@ -8,51 +8,63 @@
 
 #include "Header.h"
 
+struct student
+{
+    int id;
+    int score_d;
+    int score_c;
+    int score;
+    int rank;
+};
+
+// 升序-由小到大-‘<’
+// 降序-由大到小-‘>‘
+bool cmp(student stu1, student stu2)
+{
+    if(stu1.rank != stu2.rank)
+        return stu1.rank < stu2.rank;
+    else if(stu1.score != stu2.score)
+        return stu1.score > stu2.score;
+    else if(stu1.score_d != stu2.score_d)
+        return stu1.score_d > stu2.score_d;
+    else
+        return stu1.id < stu2.id;
+}
+
 void p_1005()
 {
     using namespace std;
     
-    int N = 0, L = 0, H = 0, count = 0;
+    int N = 0, L = 0, H = 0, n = 0;
     cin >> N >> L >> H;
-    int * stu[4];
     
-    // stu[i][4] 记录此人是第几类考生, stu[i][4] == 1 是第一类, == 0 是没过的, 以此类推
+    student stu[N];
     for(int i = 0; i < N; i++)
     {
-        for(int j = 0; j < 3; j++)
+        cin >> stu[i].id >> stu[i].score_d >> stu[i].score_c;
+        stu[i].score = stu[i].score_d + stu[i].score_c;
+        
+        if(stu[i].score_d < L || stu[i].score_c < L)
         {
-            cin >> stu[i][j];
+            stu[i].rank = 5;
+            n++;
         }
-        if(stu[i][1] >= H && stu[i][2] >= H)
-        {
-            stu[i][3] = 1;
-            count++;
-        }
-        else if(stu[i][1] >= H && stu[i][2] < H && stu[i][2] >= L)
-        {
-            stu[i][3] = 2;
-            count++;
-        }
-        else if(stu[i][1] < H && stu[i][2] < H && stu[i][1] >= L && stu[i][2] >=L && stu[i][1] >= stu[i][2])
-        {
-            stu[i][3] = 3;
-            count++;
-        }
-        else if(stu[i][1] >= L && stu[i][2] >= L)
-        {
-            stu[i][3] = 4;
-            count++;
-        }
+        else if(stu[i].score_d >= H && stu[i].score_c >= H)
+            stu[i].rank = 1;
+        else if(stu[i].score_d >= H)
+            stu[i].rank = 2;
+        else if(stu[i].score_d >= stu[i].score_c)
+            stu[i].rank = 3;
+        else
+            stu[i].rank = 4;
     }
     
-    // 设计到数组之间的排序问题, 有点头晕
-    // 如何通过数组元素的比较, 使得在数组之间进行排序呢?
-    int MAX = 0;
-    for(int i = 0; i < N; i++)
+    // <algorithm> 中的sort()
+    sort(stu, stu + N, cmp);
+    cout << N - n << endl;
+    // 不及格的考生在数组里，但没有打印出来
+    for(int i = 0; i < N - n; i++)
     {
-        if(stu[i][3] == 1)
-        {
-            MAX = stu[i][1] + stu[i][2];
-        }
+        cout << stu[i].id << ' ' << stu[i].score_d << ' ' << stu[i].score_c << endl;
     }
 }

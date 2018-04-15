@@ -12,6 +12,7 @@ void p_1001();
 void p_1002();
 void p_1003();
 void p_1004();
+void p_1005();
 
 int main(int argc, const char * argv[])
 {

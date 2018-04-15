@@ -15,5 +15,7 @@
 #include <iomanip>
 //#include <string>
 #include <cctype>
+// <algorithm> 中的sort()
+#include <algorithm>
 
 #endif /* Header_h */
