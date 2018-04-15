@@ -38,7 +38,6 @@ void p_1006()
 //    getline(cin, B);
     cin >> B;
     cin >> DB;
-    cin.get();
 
     for(int i = 0; A[i] != '\0'; i++)
     {

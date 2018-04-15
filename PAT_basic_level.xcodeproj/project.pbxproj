@@ -12,6 +12,7 @@
 		0C2D09D12081A20700D02827 /* p_1003.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D09CF2081A20700D02827 /* p_1003.cpp */; };
 		0C36E176208301A1000F2C0D /* p_1005.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C36E175208301A1000F2C0D /* p_1005.cpp */; };
 		0C36E178208334CF000F2C0D /* p_1006.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C36E177208334CF000F2C0D /* p_1006.cpp */; };
+		0C36E17A20834779000F2C0D /* p_1007.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C36E17920834779000F2C0D /* p_1007.cpp */; };
 		0CFCEDCC20810BD800BB364D /* p_1001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCEDCA20810BD800BB364D /* p_1001.cpp */; };
 		0CFCEDD020810DC900BB364D /* p_1002.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCEDCE20810DC900BB364D /* p_1002.cpp */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		0C2D09CF2081A20700D02827 /* p_1003.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = p_1003.cpp; sourceTree = "<group>"; };
 		0C36E175208301A1000F2C0D /* p_1005.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = p_1005.cpp; sourceTree = "<group>"; };
 		0C36E177208334CF000F2C0D /* p_1006.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = p_1006.cpp; sourceTree = "<group>"; };
+		0C36E17920834779000F2C0D /* p_1007.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = p_1007.cpp; sourceTree = "<group>"; };
 		0CFCEDCA20810BD800BB364D /* p_1001.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = p_1001.cpp; sourceTree = "<group>"; };
 		0CFCEDCD20810C2E00BB364D /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		0CFCEDCE20810DC900BB364D /* p_1002.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = p_1002.cpp; sourceTree = "<group>"; };
@@ -70,14 +72,15 @@
 		0C0DD3C3208106F800160858 /* PAT_basic_level */ = {
 			isa = PBXGroup;
 			children = (
-				0C36E175208301A1000F2C0D /* p_1005.cpp */,
 				0CFCEDCD20810C2E00BB364D /* Header.h */,
 				0C0DD3C4208106F800160858 /* main.cpp */,
 				0CFCEDCA20810BD800BB364D /* p_1001.cpp */,
 				0CFCEDCE20810DC900BB364D /* p_1002.cpp */,
 				0C2D09CF2081A20700D02827 /* p_1003.cpp */,
 				0C0429462081F30100ABF262 /* p_1004.cpp */,
+				0C36E175208301A1000F2C0D /* p_1005.cpp */,
 				0C36E177208334CF000F2C0D /* p_1006.cpp */,
+				0C36E17920834779000F2C0D /* p_1007.cpp */,
 			);
 			path = PAT_basic_level;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				0CFCEDCC20810BD800BB364D /* p_1001.cpp in Sources */,
 				0CFCEDD020810DC900BB364D /* p_1002.cpp in Sources */,
+				0C36E17A20834779000F2C0D /* p_1007.cpp in Sources */,
 				0C0429472081F30100ABF262 /* p_1004.cpp in Sources */,
 				0C36E178208334CF000F2C0D /* p_1006.cpp in Sources */,
 				0C2D09D12081A20700D02827 /* p_1003.cpp in Sources */,
