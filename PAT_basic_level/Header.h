@@ -20,4 +20,6 @@
 // <algorithm> 中的sort() p_1005
 #include <algorithm>
 
+#include <string>
+
 #endif /* Header_h */
