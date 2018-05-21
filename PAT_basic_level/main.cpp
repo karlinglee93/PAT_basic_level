@@ -17,6 +17,7 @@ void p_1006();
 void p_1007();
 void p_1008();
 void p_1009();
+void p_1010();
 
 int main(int argc, const char * argv[])
 {
@@ -28,7 +29,8 @@ int main(int argc, const char * argv[])
 //    p_1006();
 //    p_1007();
 //    p_1008();
-    p_1009();
+//    p_1009();
+    p_1010();
     
     return 0;
 }
