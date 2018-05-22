@@ -11,27 +11,59 @@
 
 using namespace std;
 
+struct PIE
+{
+    int stock;
+    int value;
+    double price;
+};
+
+// cmp 函数返回值为bool，若第一个排在第二个的前面，则返回true
+// 故 a.value > b.value 代表降序；a.value < b.value 代表升序（默认的）
+bool cmp(PIE a, PIE b)
+{
+    return a.price > b.price;
+}
+
 void p_1010()
 {
     int N, D;
     cin >> N >> D;
+    PIE pie[N];
     
-    int stock[N];
-    int value[N];
-    double price[N];
     for (int i = 0; i < N; i++)
     {
-        cin >> stock[i];
+        cin >> pie[i].stock;
     }
     for (int i = 0; i < N; i++)
     {
-        cin >> value[i];
+        cin >> pie[i].value;
     }
     for (int i = 0; i < N; i++)
     {
-        price[i] = ((double)value[i]) / ((double)stock[i]);
+        pie[i].price = ((double)pie[i].value) / ((double)pie[i].stock);
     }
     
     double sum = 0.0;
-    while (D >= 0)
+    
+    // 用sort() 排序后如何处理？
+    // 结构体貌似不能用pie.start() 和pie.end();
+    // cmp 函数的使用方法
+    sort(pie, pie+N, cmp);
+    // 对sort() 的理解还是不够
+    
+    for (int i = 0; i < N; i++)
+    {
+        if (D >= pie[i].stock)
+        {
+            sum += pie[i].value;
+            D -= pie[i].stock;
+        }
+        else
+        {
+            sum += D * pie[i].price;
+            break;
+        }
+    }
+    cout << fixed << setprecision(2) << sum;
 }
