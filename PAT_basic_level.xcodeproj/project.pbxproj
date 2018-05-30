@@ -11,6 +11,7 @@
 		0C07FCA72088711800336B3A /* p_1008.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C07FCA62088711800336B3A /* p_1008.cpp */; };
 		0C07FCA920887E3400336B3A /* p_1009.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C07FCA820887E3400336B3A /* p_1009.cpp */; };
 		0C0DD3C5208106F800160858 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0DD3C4208106F800160858 /* main.cpp */; };
+		0C21CB1520BC1C53003B7FC2 /* p_1011.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C21CB1420BC1C53003B7FC2 /* p_1011.cpp */; };
 		0C2D09D12081A20700D02827 /* p_1003.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D09CF2081A20700D02827 /* p_1003.cpp */; };
 		0C36E176208301A1000F2C0D /* p_1005.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C36E175208301A1000F2C0D /* p_1005.cpp */; };
 		0C36E178208334CF000F2C0D /* p_1006.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C36E177208334CF000F2C0D /* p_1006.cpp */; };
@@ -38,6 +39,7 @@
 		0C07FCA820887E3400336B3A /* p_1009.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = p_1009.cpp; sourceTree = "<group>"; };
 		0C0DD3C1208106F800160858 /* PAT_basic_level */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PAT_basic_level; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C0DD3C4208106F800160858 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0C21CB1420BC1C53003B7FC2 /* p_1011.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = p_1011.cpp; sourceTree = "<group>"; };
 		0C2D09CF2081A20700D02827 /* p_1003.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = p_1003.cpp; sourceTree = "<group>"; };
 		0C36E175208301A1000F2C0D /* p_1005.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = p_1005.cpp; sourceTree = "<group>"; };
 		0C36E177208334CF000F2C0D /* p_1006.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = p_1006.cpp; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				0C07FCA62088711800336B3A /* p_1008.cpp */,
 				0C07FCA820887E3400336B3A /* p_1009.cpp */,
 				0CD1DD5B20B2F20F00A003A6 /* p_1010.cpp */,
+				0C21CB1420BC1C53003B7FC2 /* p_1011.cpp */,
 			);
 			path = PAT_basic_level;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				0C36E178208334CF000F2C0D /* p_1006.cpp in Sources */,
 				0C2D09D12081A20700D02827 /* p_1003.cpp in Sources */,
 				0C36E176208301A1000F2C0D /* p_1005.cpp in Sources */,
+				0C21CB1520BC1C53003B7FC2 /* p_1011.cpp in Sources */,
 				0C07FCA72088711800336B3A /* p_1008.cpp in Sources */,
 				0C0DD3C5208106F800160858 /* main.cpp in Sources */,
 			);
